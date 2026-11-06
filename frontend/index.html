@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE Triage Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PE Triage Dashboard</h1>
+            <p>다중 파일 악성 판별 및 3개 엔진 분석 현황</p>
+        </header>
+
+        <section class="upload-section">
+            <input type="file" id="fileInput" multiple>
+            <button id="uploadBtn">분석 시작</button>
+        </section>
+
+        <section class="table-section">
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>파일명</th>
+                        <th>종합 판정</th>
+                        <th>1. Hash 엔진</th>
+                        <th>2. PE 엔진</th>
+                        <th>3. YARA 엔진</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody">
+                    <!-- 업로드한 파일에 따라 동적으로 행이 추가됩니다 -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
